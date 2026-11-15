@@ -5,7 +5,7 @@ interface GraduateCutoutImageProps {
 }
 
 /**
- * Renders /assets/aistudio/MODELO_935a866f.png with its light studio background
+ * Renders the graduate image with its light studio background
  * cleanly removed via perimeter BFS flood-fill and anti-aliased edge feathering.
  */
 export function GraduateCutoutImage({ className = '' }: GraduateCutoutImageProps) {
@@ -16,7 +16,8 @@ export function GraduateCutoutImage({ className = '' }: GraduateCutoutImageProps
     let cancelled = false;
     const img = new Image();
     img.crossOrigin = 'anonymous';
-    img.src = '/assets/aistudio/MODELO_935a866f.png';
+    // Ruta corregida apuntando a la carpeta public/images compatible con GitHub Pages
+    img.src = `${import.meta.env.BASE_URL}images/MODELO_935a866f.png`;
 
     img.onload = () => {
       if (cancelled) return;

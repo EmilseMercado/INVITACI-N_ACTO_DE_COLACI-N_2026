@@ -5,6 +5,7 @@ import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
   return {
+    base: '/INVITACI-N_ACTO_DE_COLACI-N_2026/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
