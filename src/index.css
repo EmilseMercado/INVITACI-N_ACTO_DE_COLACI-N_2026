@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-script: "Great Vibes", cursive;
+  --font-signature: "Alex Brush", cursive;
+  --font-career: "Montserrat", system-ui, sans-serif;
+  --font-date: "Bodoni Moda", Georgia, serif;
+  --font-serif: "Great Vibes", Georgia, cursive;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+
+  --color-navy-950: #01091b;
+  --color-navy-900: #041332;
+  --color-navy-800: #082356;
+  --color-royal-700: #0d3680;
+  --color-royal-600: #1449a6;
+  --color-gold-100: #fbf3d5;
+  --color-gold-300: #edd082;
+  --color-gold-400: #dfba5b;
+  --color-gold-500: #c99e3a;
+  --color-gold-600: #9f7922;
+}
+
+@layer base {
+  html,
+  body {
+    background-color: #01091b;
+    color: #f8fafc;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes goldBorderPulse {
+  0%,
+  100% {
+    box-shadow:
+      0 0 18px rgba(223, 186, 91, 0.22),
+      inset 0 0 12px rgba(223, 186, 91, 0.08);
+  }
+  50% {
+    box-shadow:
+      0 0 32px rgba(237, 208, 130, 0.42),
+      inset 0 0 18px rgba(223, 186, 91, 0.18);
+  }
+}
+
+@keyframes titleGlow {
+  0%,
+  100% {
+    text-shadow:
+      0 0 22px rgba(237, 208, 130, 0.28),
+      0 2px 10px rgba(0, 0, 0, 0.55);
+  }
+  50% {
+    text-shadow:
+      0 0 38px rgba(251, 243, 213, 0.5),
+      0 0 64px rgba(201, 158, 58, 0.25),
+      0 2px 12px rgba(0, 0, 0, 0.65);
+  }
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(
+    110deg,
+    #c99e3a 0%,
+    #edd082 28%,
+    #fbf3d5 50%,
+    #edd082 72%,
+    #c99e3a 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: goldShimmer 6.5s linear infinite;
+}
+
+.gold-ribbon-gradient {
+  background: linear-gradient(
+    105deg,
+    #8f6a1c 0%,
+    #c99e3a 20%,
+    #f1d88d 48%,
+    #c99e3a 78%,
+    #8f6a1c 100%
+  );
+}
+
+.gold-border-glow {
+  animation: goldBorderPulse 4s ease-in-out infinite;
+}
+
+.title-illumination {
+  animation: titleGlow 4.5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer-text,
+  .gold-border-glow,
+  .title-illumination {
+    animation: none;
+  }
+}

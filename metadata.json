@@ -1,0 +1,6 @@
+{
+  "name": "Colación de Grado UPDS 2026 — Emilse Mercado Ramos",
+  "description": "Invitación digital interactiva al Acto de Colación de Grado UPDS 2026 de Emilse Mercado Ramos, Ingeniería de Sistemas, Tarija.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
