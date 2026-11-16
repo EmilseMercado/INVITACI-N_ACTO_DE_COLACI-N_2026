@@ -16,8 +16,8 @@ export function GraduateCutoutImage({ className = '' }: GraduateCutoutImageProps
     let cancelled = false;
     const img = new Image();
     img.crossOrigin = 'anonymous';
-    // Ruta corregida apuntando a la carpeta public/images compatible con GitHub Pages
-    img.src = `${import.meta.env.BASE_URL}images/MODELO_935a866f.png`;
+    // Ruta corregida con el nombre exacto de tu archivo en public/images/
+    img.src = `${import.meta.env.BASE_URL}images/media_1794635346144_2944aaee.jpg`;
 
     img.onload = () => {
       if (cancelled) return;
