@@ -52,7 +52,7 @@ export function CapsVideoStage({ onComplete }: CapsVideoStageProps) {
     >
       <video
         ref={videoRef}
-        src="/assets/aistudio/MODE_95765ca8.mp4"
+        src={`${import.meta.env.BASE_URL}videos/MODE_95765ca8.mp4`}
         autoPlay
         loop
         muted
